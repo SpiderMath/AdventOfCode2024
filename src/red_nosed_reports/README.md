@@ -3,9 +3,9 @@
 ### Problem Statement
 
 <details>
-<summary>Part 1</summary>
+<summary>Part One</summary>
 
-```
+<code>
 --- Day 2: Red-Nosed Reports ---
 Fortunately, the first location The Historians want to search isn't a long walk from the Chief Historian's office.
 
@@ -38,13 +38,14 @@ In the example above, the reports can be found safe or unsafe by checking those 
 So, in this example, 2 reports are safe.
 
 Analyze the unusual data from the engineers. How many reports are safe?
-```
+</code>
+
 </details>
 
 <details>
 <summary>Part Two</summary>
 
-```
+<code>
 --- Part Two ---
 The engineers are surprised by the low number of safe reports until they realize they forgot to tell you about the Problem Dampener.
 
@@ -63,7 +64,7 @@ More of the above example's reports are now safe:
 Thanks to the Problem Dampener, 4 reports are actually safe!
 
 Update your analysis by handling situations where the Problem Dampener can remove a single level from unsafe reports. How many reports are now safe?
-```
+</code>
 
 </details>
 
