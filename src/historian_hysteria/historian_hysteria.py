@@ -6,16 +6,18 @@
 ## And finally return the distances
 
 import re
+from typing import List
 
 with open("./input.txt", "r") as inp_file:
-    list1 = []
-    list2 = []
-    dist = 0
+    list1: List[int] = []
+    list2: List[int] = []
+    dist: int = 0
 
     # Taking in the input
     input_txt = inp_file.read()
     # setting values accordingly
-    lines = input_txt.split("\n")
+    lines: List[str] = input_txt.split("\n")
+
     for line in lines:
         # Y'all really don't have a built in way to handle regex w/o a package huh? 💀
         # I just would use / +/ to separate w/ multiple whitespaces in b/w the two numbers wtf
@@ -30,7 +32,7 @@ with open("./input.txt", "r") as inp_file:
 
     # Comparing the lists
     for i in range(0, len(list1)):
-        point_dist = abs(list1[i] - list2[i])
+        point_dist: int = abs(list1[i] - list2[i])
         dist += point_dist
         print(f"Distance: currently at index {i} with a diff {point_dist}")
 
@@ -42,8 +44,8 @@ with open("./input.txt", "r") as inp_file:
 ## One way to compare the two arrays would be to have moving pointers
 ## So we move the left pointer in increments and move the right pointer as we find value at right pointer being less than value at left pointer, adding to sim_score if there is a value at right that's equal to the value in consideration
 
-    r_ptr = 0
-    sim_score = 0
+    r_ptr: int = 0
+    sim_score: int = 0
 
     # Could I have done this in the previous loop? Yes
     # But it kinda ruins the segregation aspect of the code, that part 1 and part 2 as separate kinda thing
@@ -56,7 +58,7 @@ with open("./input.txt", "r") as inp_file:
             r_ptr += 1
 
         # Calculating sim_count of iteration
-        sim_count = 0
+        sim_count: int = 0
         while list2[r_ptr] == list1[i]:
             r_ptr += 1
             sim_count += 1
